@@ -23,11 +23,13 @@ jobs:
       with:
         java-version: '8'
         distribution: 'temurin'
+        server-id: github
+        settings-path: ${{ github.workspace }}
 
     - name: Get version
       run: echo "RELEASE_VERSION=$(git describe --tags)" >> $GITHUB_ENV
 
     - name: Publish to GitHub Packages Apache Maven
-      run: mvn -B -Drevision=${{ env.RELEASE_VERSION }} -Dsha1= -Dchangelist= deploy -s dependencies.settings.xml
+      run: mvn -B -Drevision=${{ env.RELEASE_VERSION }} -Dsha1= -Dchangelist= deploy -s ${{ github.workspace }}/settings.xml
       env:
         GITHUB_TOKEN: ${{ github.token }}
