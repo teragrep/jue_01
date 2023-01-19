@@ -111,6 +111,8 @@
             <exclude>.gitmodules</exclude>
             <!-- ci -->
             <exclude>.github/workflows/*.yml</exclude>
+            <exclude>toolchains.xml</exclude>
+            <exclude>settings.xml</exclude>
             <!-- readme -->
             <exclude>README.adoc</exclude>
             <exclude>README.md</exclude>
