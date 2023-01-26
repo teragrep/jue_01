@@ -8,12 +8,7 @@ on:
         required: true
       COVERITY_EMAIL:
         required: true
-  push:
-    secrets:
-      COVERITY_TOKEN:
-        required: true
-      COVERITY_EMAIL:
-        required: true
+
 jobs:
   verify:
     name: Verify Code
