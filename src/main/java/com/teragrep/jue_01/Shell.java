@@ -249,7 +249,7 @@ public abstract class Shell {
         }
     }
 
-    /** return an array containing the command name & its parameters */
+    /** return an array containing the command name &amp; its parameters */
     protected abstract String[] getExecString();
 
     /** Parse the execution result */
